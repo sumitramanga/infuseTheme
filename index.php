@@ -1,21 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<?php wp_head(); ?>
-	<title>Infuse - Yoobee School of Design 2018 Exhibiton</title>
-</head>
-<body>
+<?php get_header(); ?>
 
+<div class="container">
 	<?php if(have_posts()): ?>
 		<?php while(have_posts()): the_post(); ?>
-			<h1><?php the_title(); ?></h1>
-			<div><?php the_content(); ?></div>
+
+			<div class="row">
+				<div class="col-xs-12 col-md-4">
+					<h1><?php the_title(); ?></h1>
+				</div>
+
+				<div class="w-100"></div>
+
+				<div class="col-xs-12 col-md-4">
+					<div><?php the_content(); ?></div>
+				</div>
+
+				<div class="w-100"></div>
+
+				<?php if (has_post_thumbnail()):?>
+					<div class="col-xs-12 col-md-4">
+						<?php the_post_thumbnail('medium', ['class' => 'post-img', 'alt'=>'thumbnail post image']); ?>
+					</div>
+
+				<?php else: ?>
+					<div class="col-xs-12">
+				<?php endif; ?>
+				</div> <!-- end the col div -->
+			</div> <!-- end the row div -->
+
 		<?php endwhile; ?>
 	<?php endif; ?>
+</div>
 
-	<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>
