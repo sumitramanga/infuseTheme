@@ -10,7 +10,7 @@
 <body>
 
 	<nav class="navbar navbar-light bg-light">
-	  <a class="navbar-brand" href="#">Infuse</a>
+	  <a class="navbar-brand" href="#">INFUSE</a>
 	</nav>
 
 	<!-- Show nav on page -->
