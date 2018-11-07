@@ -7,7 +7,7 @@
 	<?php wp_head(); ?>
 	<title>Infuse - Yoobee School of Design 2018 Exhibiton</title>
 </head>
-<body>
+<body class="bg-color">
 
 	<nav class="navbar navbar-light bg-light">
 	  <a class="navbar-brand" href="#">INFUSE</a>

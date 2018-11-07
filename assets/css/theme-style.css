@@ -1,8 +1,47 @@
-.container {
+
+@font-face {
+	font-family: 'Avenir Next';
+	src: url('../web-fonts/Avenir-Next.ttc') format('ttc');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato Regular';
+	src: url('../web-fonts/Lato-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato Bold';
+	src: url('../web-fonts/Lato-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato Black';
+	src: url('../web-fonts/Lato-Black.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato Light';
+	src: url('../web-fonts/Lato-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.main {
 	background-color: pink;
+	height: 91vh;
 }
 
 .lead {
+	color: #FFFFFF;
+	font-family: 'Lato Light', sans-serif;
 	font-size: 0.87em;
 	margin: 2em 0;
 	padding: 0 1em;
@@ -21,23 +60,71 @@
 }
 
 .class-link-btn {
-	border: 0.25em solid white;
+	border: 0.25em solid #FFFFFF;
 	border-radius: 2em;
-	color: white;
+	color: #FFFFFF;
+	font-family: 'Lato Bold', sans-serif;
 	font-size: 0.9em;
 	padding: 0.7em 0;
 	text-transform: uppercase;
 }
 
 .class-link-btn:hover {
-	color: black;
-	background-color: white;
+	color: #1C1C1C;
+	background-color:  #FFFFFF;
 }
 
 .footer{
-  color: #FFFFFF;
-  background-color: #1C1C1C;
+	color: #FFFFFF;
+	background-color: #1C1C1C;
 }
 
-.footer hr{
-  color: #FFFFFF;
+.exhib-time {
+	font-size: 0.87em;
+	padding: 2em 1em 0 1em;
+	text-align: center;
+}
+
+.exhib-address p {
+	text-align: center;
+	font-size: 0.87em;
+	margin: 2em 0;
+}
+
+.hr{
+ 	border-top: 2px solid  #FFFFFF;
+	width: 100%;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.footer {
+	font-family: 'Lato Regular', sans-serif;
+}
+
+.map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.sponsers {
+	background-color: #1C1C1C;
+	padding: 1.3em 0;
+}
+
+.sponsers a {
+	color: #FFFFFF;
+	font-size: 0.6em;
+	text-transform: uppercase;
+	font-family: 'Lato Bold', sans-serif;
+}
