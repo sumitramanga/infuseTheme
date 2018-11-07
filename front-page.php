@@ -9,6 +9,8 @@
 
 		<?php if ($custom_logo): ?>
 			<img src="<?= $logo_url ?>" alt="Logo">
+		<?php else: ?>
+			<h1 class="logoText"><?= bloginfo('name'); ?></h1>
 		<?php endif; ?>
 
 		<p class="lead">
