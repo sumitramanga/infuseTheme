@@ -18,3 +18,102 @@ function addCustomMenus(){
 
 // Fire the function/add action on initilising the theme
 add_action('init', 'addCustomMenus');
+
+
+
+//-------------- ADDING POST TYPE STUDENTS -----------------
+
+
+// WEB STUDENTS
+function add_webStudents_post_type(){
+
+  $labels = array(
+    'name' => _x('18WDWU02', 'post type name', 'infusetheme'),
+    'singular_name' => _x('18WDWU02', 'post type singular name', 'infusetheme'),
+    'add_new_item' => _x('Add web student', 'adding web student', 'infusetheme')
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'description' => 'a post type for the web students',
+    'public' => true,
+    'hierarchical' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'show_in_nav_menus' => false,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-laptop',
+    'supports' => array(
+      'title',
+			'editor',
+      'thumbnail'
+    ),
+    'query_var' => true
+  );
+  register_post_type('webStudents', $args);
+}
+
+add_action('init', 'add_webStudents_post_type');
+
+
+// Creative digital STUDENTS
+function add_graphicsStudents_post_type(){
+
+  $labels = array(
+    'name' => _x('18WDCD02', 'post type name', 'infusetheme'),
+    'singular_name' => _x('18WDCD02', 'post type singular name', 'infusetheme'),
+    'add_new_item' => _x('Add graphics student', 'adding graphics student', 'infusetheme')
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'description' => 'a post type for the graphics students',
+    'public' => true,
+    'hierarchical' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'show_in_nav_menus' => false,
+    'menu_position' => 6,
+    'menu_icon' => 'dashicons-art',
+    'supports' => array(
+      'title',
+			'editor',
+      'thumbnail'
+    ),
+    'query_var' => true
+  );
+  register_post_type('graphicsStudents', $args);
+}
+
+add_action('init', 'add_graphicsStudents_post_type');
+
+// Screen production STUDENTS
+function add_screenStudents_post_type(){
+
+  $labels = array(
+    'name' => _x('18WDSP02', 'post type name', 'infusetheme'),
+    'singular_name' => _x('18WDSP02', 'post type singular name', 'infusetheme'),
+    'add_new_item' => _x('Add screen student', 'adding screen student', 'infusetheme')
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'description' => 'a post type for the screen students',
+    'public' => true,
+    'hierarchical' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'show_in_nav_menus' => false,
+    'menu_position' => 7,
+    'menu_icon' => 'dashicons-editor-video',
+    'supports' => array(
+      'title',
+			'editor',
+      'thumbnail'
+    ),
+    'query_var' => true
+  );
+  register_post_type('screenStudents', $args);
+}
+
+add_action('init', 'add_screenStudents_post_type');
