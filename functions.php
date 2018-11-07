@@ -118,3 +118,16 @@ function add_screenStudents_post_type(){
 }
 
 add_action('init', 'add_screenStudents_post_type');
+
+
+//-------------- ADDING LOGO SUPPORT -----------------
+function addCustomLogo() {
+	add_theme_support('custom-logo', array(
+		'height' => 480,
+		'width' => 350,
+		'flex-height' => false,
+		'flex-width' => false
+	));
+}
+
+add_action('init', 'addCustomLogo');
