@@ -1,6 +1,35 @@
+body {
+	background-color: pink;
+}
+
 .lead {
+	font-size: 0.87em;
+	margin: 2em 0;
+	padding: 0 1em;
 	text-transform: uppercase;
 }
+
 .logoText {
+	font-size: 5em;
+	margin-top: 0.5em;
 	text-transform: uppercase;
+}
+
+.class-btn {
+	margin-bottom: 1em;
+	width: 70%;
+}
+
+.class-link-btn {
+	border: 0.25em solid white;
+	border-radius: 2em;
+	color: white;
+	font-size: 0.9em;
+	padding: 0.7em 0;
+	text-transform: uppercase;
+}
+
+.class-link-btn:hover {
+	color: black;
+	background-color: white;
 }
