@@ -1,4 +1,4 @@
-body {
+.container {
 	background-color: pink;
 }
 
@@ -11,7 +11,7 @@ body {
 
 .logoText {
 	font-size: 5em;
-	margin-top: 0.5em;
+	padding-top: 0.5em;
 	text-transform: uppercase;
 }
 
