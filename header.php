@@ -9,8 +9,8 @@
 </head>
 <body class="bg-color">
 
-	<nav class="navbar navbar-light bg-light">
-	  <a class="navbar-brand" href="#">INFUSE</a>
+	<nav class="navbar navbar-light navbarBg">
+	  <a class="navbar-brand" href="#"><?= bloginfo('name'); ?></a>
 	</nav>
 
 	<!-- Show nav on page -->
