@@ -29,8 +29,8 @@ add_action('init', 'addCustomMenus');
 function add_webStudents_post_type(){
 
   $labels = array(
-    'name' => _x('18WDWU02', 'post type name', 'infusetheme'),
-    'singular_name' => _x('18WDWU02', 'post type singular name', 'infusetheme'),
+    'name' => _x('Web and UX', 'post type name', 'infusetheme'),
+    'singular_name' => _x('Web and UX', 'post type singular name', 'infusetheme'),
     'add_new_item' => _x('Add web student', 'adding web student', 'infusetheme')
   );
 
@@ -61,8 +61,8 @@ add_action('init', 'add_webStudents_post_type');
 function add_graphicsStudents_post_type(){
 
   $labels = array(
-    'name' => _x('18WDCD02', 'post type name', 'infusetheme'),
-    'singular_name' => _x('18WDCD02', 'post type singular name', 'infusetheme'),
+    'name' => _x('Creative Digital', 'post type name', 'infusetheme'),
+    'singular_name' => _x('Creative Digital', 'post type singular name', 'infusetheme'),
     'add_new_item' => _x('Add graphics student', 'adding graphics student', 'infusetheme')
   );
 
@@ -92,8 +92,8 @@ add_action('init', 'add_graphicsStudents_post_type');
 function add_screenStudents_post_type(){
 
   $labels = array(
-    'name' => _x('18WDSP02', 'post type name', 'infusetheme'),
-    'singular_name' => _x('18WDSP02', 'post type singular name', 'infusetheme'),
+    'name' => _x('Screen Production', 'post type name', 'infusetheme'),
+    'singular_name' => _x('Screen Production', 'post type singular name', 'infusetheme'),
     'add_new_item' => _x('Add screen student', 'adding screen student', 'infusetheme')
   );
 
