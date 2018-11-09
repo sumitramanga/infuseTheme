@@ -66,24 +66,35 @@
 	text-transform: uppercase;
 }
 
-.class-btn {
-	margin-bottom: 1em;
-	width: 70%;
+
+/* menu */
+
+.main-menu {
+	padding: 0;
 }
 
-.class-link-btn {
+.main-menu li {
+	margin-bottom: 2em;
+    list-style: none;
+}
+
+.main-menu li a {
 	border: 0.25em solid #FFFFFF;
 	border-radius: 2em;
 	color: #FFFFFF;
 	font-family: 'Lato Bold', sans-serif;
 	font-size: 0.9em;
-	padding: 0.7em 0;
+	padding: 1em 2em;
 	text-transform: uppercase;
+	display: block;
+	margin: 0 auto;
+	width: 85%;
 }
 
-.class-link-btn:hover {
+.main-menu li a:hover {
 	color: #1C1C1C;
 	background-color:  #FFFFFF;
+	text-decoration: none;
 }
 
 .footer{

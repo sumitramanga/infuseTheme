@@ -12,11 +12,3 @@
 	<nav class="navbar navbar-light navbarBg">
 	  <a class="navbar-brand" href="#"><?= bloginfo('name'); ?></a>
 	</nav>
-
-	<!-- Show nav on page -->
-	<!-- php wp_nav_menu(array(
-		'theme_location' => 'header_nav',
-		'menu_class' => 'header-menu',
-		'menu-id' => 'header-menu',
-		'container_id' => 'header-menu-container'
-	));  -->

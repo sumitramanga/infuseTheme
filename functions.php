@@ -14,13 +14,11 @@ add_theme_support('post-thumbnails');
 
 function addCustomMenus(){
 	add_theme_support('menus');
-	register_nav_menu('header_nav', 'At the top of the page (main)');
+	register_nav_menu('main_nav', 'In the middle of the homepage');
 }
 
 // Fire the function/add action on initilising the theme
 add_action('init', 'addCustomMenus');
-
-
 
 //-------------- ADDING POST TYPE STUDENTS -----------------
 
@@ -121,6 +119,7 @@ add_action('init', 'add_screenStudents_post_type');
 
 
 //-------------- ADDING LOGO SUPPORT -----------------
+
 function addCustomLogo() {
 	add_theme_support('custom-logo', array(
 		'height' => 480,

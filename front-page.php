@@ -17,17 +17,13 @@
 			Yoobee School of Design Wellington Campus Presents The 2018 Graduation Day Of Three Level 6 Courses
 		</p>
 
-		<div class="row justify-content-center h-100">
-			<div class="col- class-btn btn-block">
-				<a href="#" class="btn btn-lg btn-block class-link-btn">Web and UX</a>
-			</div>
-			<div class="col- class-btn btn-block">
-				<a href="#" class="btn btn-lg btn-block class-link-btn">Creative Digital</a>
-			</div>
-			<div class="col- class-btn btn-block">
-				<a href="#" class="btn btn-lg btn-block class-link-btn">Screen Production</a>
-			</div>
-		</div>
+		<!-- Show nav on page -->
+		<?php wp_nav_menu(array(
+			'theme_location' => 'main_nav',
+			'menu_class' => 'main-menu h-100',
+			'menu-id' => 'main-menu',
+			'container_class' => 'header-menu-container'
+		));  ?>
 	</div>
 </div>
 
