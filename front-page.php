@@ -30,17 +30,8 @@
 
 <div class="footer">
 	<div class="footer-content container">
-		<div class="row justify-content-center h-100">
-			<div class="col-">
-				<p class="exhib-time">Wednesday 12 Decemeber 5:30–7:00PM</p>
-			</div>
-		</div>
-
-		<hr class="hr">
-		<div class="row justify-content-center h-100">
-			<div class="row exhib-address">
-		    	<p>Level 2, 2 Bunny Street</br>West Wing, Wellington Railway Station</br>Wellington 6011</p>
-		    </div>
+		<div id="front_date_widget">
+			<?php dynamic_sidebar('front_date_widget'); ?>
 		</div>
 
 		<div class="row map-container">
