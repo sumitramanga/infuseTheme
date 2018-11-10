@@ -54,9 +54,11 @@
 	color: #ED217C;
 }
 
-.main-screen {
-	position: absolute;
-	top: 21%;
+.wrapper-main {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 
 .lead {
@@ -174,4 +176,42 @@
 	font-size: 0.6em;
 	text-transform: uppercase;
 	font-family: 'Lato Bold', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+	.main {
+		height: 50vh;
+	}
+
+	.container {
+		padding-right: 4em;
+		padding-left: 4em;
+	}
+
+	.main-menu li a {
+		width: 56%;
+	}
+
+	.exhib-address p, .exhib-time {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.main-menu li a {
+    	width: 39%;
+	}
+
+	.lead {
+		font-size: 1.2em;
+		padding: 0 6em;
+	}
+
+	.exhib-time {
+		padding-top: 4em;
+	}
+
+	.exhib-address p, .exhib-time {
+		font-size: 1.2em;
+	}
 }
