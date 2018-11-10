@@ -42,7 +42,7 @@
 	background: #2c2b71;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top left, #2c2b71, #4FC2B6, #ED217C);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top left, #2c2b71, #4FC2B6, #ED217C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 91vh;
+	/* height: 91vh; */
 }
 
 .navbarBg {
@@ -63,6 +63,10 @@
 	text-transform: uppercase;
 }
 
+.mainLogo {
+	margin-top: 2em;
+}
+
 .logoText {
 	color: #FFFFFF;
 	font-size: 5em;
@@ -75,6 +79,7 @@
 
 .main-menu {
 	padding: 0;
+	margin-bottom: 0;
 }
 
 .main-menu li {
@@ -102,7 +107,7 @@
 	transition: 0.4s;
 }
 
-.footer{
+.footer-content {
 	color: #FFFFFF;
 	background-color: #1C1C1C;
 }
@@ -145,6 +150,10 @@
     height: 100%;
     width: 100%;
     position: absolute;
+}
+
+.footerSponsersSec{
+	background-color: #1C1C1C;
 }
 
 .sponsers {
