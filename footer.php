@@ -1,18 +1,24 @@
-	<div class="container">
-		<div class="row justify-content-around sponsers">
-			<div class="col-"><a href="#">Sponsor</a></div>
-			<div class="col-"><a href="#">Sponsor</a></div>
-			<div class="col-"><a href="#">Sponsor</a></div>
-		</div>
-	</div>
+	<div class="footerSponsersSec">
+		<div class="container">
+			<?php
+				$footerText = get_theme_mod('footer_text_setting');
+				$footerTextTwo = get_theme_mod('footer_text_setting_two');
+				$footerTextThree = get_theme_mod('footer_text_setting_three');
+			 ?>
 
-	<?php $footerText = get_theme_mod('footer_text_setting'); ?>
-		<div class="row">
-			<div class="col text-color">
-				<p><?php echo get_theme_mod('footer_text_setting'); ?></p>
+			<div class="row justify-content-around sponsers">
+				<div class="col-">
+					<a href="#"><?php echo get_theme_mod('footer_text_setting'); ?></a>
+				</div>
+				<div class="col-">
+					<a href="#"><?php echo get_theme_mod('footer_text_setting_two'); ?></a>
+				</div>
+				<div class="col-">
+					<a href="#"><?php echo get_theme_mod('footer_text_setting_three'); ?></a>
+				</div>
 			</div>
 		</div>
-
+	</div>
 
 	<?php wp_footer(); ?>
 </body>
