@@ -126,8 +126,8 @@ function addCustomLogo() {
 	add_theme_support('custom-logo', array(
 		'height' => 480,
 		'width' => 350,
-		'flex-height' => false,
-		'flex-width' => false
+		'flex-height' => true,
+		'flex-width' => true
 	));
 }
 

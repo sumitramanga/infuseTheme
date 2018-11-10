@@ -1,22 +1,34 @@
 	<div class="footerSponsersSec">
 		<div class="container">
 			<?php
-				$footerText = get_theme_mod('footer_text_setting');
-				$footerTextTwo = get_theme_mod('footer_text_setting_two');
-				$footerTextThree = get_theme_mod('footer_text_setting_three');
+				$footerLogoSetting = get_theme_mod('footer_logo_setting');
+				$footerLogoSettingTwo = get_theme_mod('footer_logo_setting_two');
+				$footerLogoSettingThree = get_theme_mod('footer_logo_setting_three');
 			 ?>
 
-			<div class="row justify-content-around sponsers">
-				<div class="col-">
-					<a href="#"><img src="<?php echo get_theme_mod('footer_text_setting'); ?>" alt="sponser"></a>
+			<!-- Checking if sponser logos are active -->
+
+			<?php if(strlen($footerLogoSetting) > 0 || strlen($footerLogoSettingTwo) > 0 || strlen($footerLogoSettingThree) > 0):  ?>
+				<div class="row justify-content-around sponsers">
+					<?php if( strlen($footerLogoSetting) > 0 ): ?>
+						<div class="col-">
+							<a href="#"><img src="<?php echo get_theme_mod('footer_logo_setting'); ?>" alt="sponser"></a>
+						</div>
+					<?php endif; ?>
+
+					<?php if( strlen($footerLogoSettingTwo) > 0 ): ?>
+						<div class="col-">
+							<a href="#"><img src="<?php echo get_theme_mod('footer_logo_setting_two'); ?>" alt="sponser"></a>
+						</div>
+					<?php endif; ?>
+
+					<?php if( strlen($footerLogoSettingThree) > 0 ): ?>
+						<div class="col-">
+							<a href="#"><img src="<?php echo get_theme_mod('footer_logo_setting_three'); ?>" alt="sponser"></a>
+						</div>
+					<?php endif; ?>
 				</div>
-				<div class="col-">
-					<a href="#"><img src="<?php echo get_theme_mod('footer_text_setting_two'); ?>" alt="sponser"></a>
-				</div>
-				<div class="col-">
-					<a href="#"><img src="<?php echo get_theme_mod('footer_text_setting_three'); ?>" alt="sponser"></a>
-				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 

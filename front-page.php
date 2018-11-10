@@ -13,9 +13,11 @@
 			<h1 class="logoText"><?= bloginfo('name'); ?></h1>
 		<?php endif; ?>
 
-		<p class="lead">
-			Yoobee School of Design Wellington Campus Presents The 2018 Graduation Day Of Three Level 6 Courses
-		</p>
+		<?php if(get_bloginfo('description') != ''): ?>
+			<p class="lead">
+				<?= bloginfo('description'); ?>
+			</p>
+		<?php endif; ?>
 
 		<!-- Show nav on page -->
 		<?php wp_nav_menu(array(
@@ -29,15 +31,22 @@
 
 <div class="footer-content">
 	<div class="container">
-		<div id="front_date_widget">
-			<?php dynamic_sidebar('front_date_widget'); ?>
-		</div>
-
-		<div class="row map-container">
-			<div id="map">
-				<?php echo get_theme_mod('custom_theme_map_setting'); ?>
+		<!-- Date/Time viewing -->
+		<?php if(is_active_sidebar('front_date_widget')): ?>
+			<div id="front_date_widget">
+				<?php dynamic_sidebar('front_date_widget'); ?>
 			</div>
-		</div>
+		<?php endif; ?>
+
+		<!-- Map viewing -->
+		<?php $mapText = get_theme_mod('custom_theme_map_setting'); ?>
+		<?php if( strlen($mapText) > 0 ): ?>
+			<div class="row map-container">
+				<div id="map">
+					<?php echo get_theme_mod('custom_theme_map_setting'); ?>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
 
