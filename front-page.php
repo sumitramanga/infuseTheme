@@ -1,31 +1,47 @@
 <?php get_header(); ?>
 
 <div class="main">
-	<div class="container text-center">
+	<div class="container align-items-center text-center main-screen">
 		<?php
 			$custom_logo = get_theme_mod('custom_logo');
 			$logo_url = wp_get_attachment_image_url($custom_logo, 'medium');
 		 ?>
 
 		<?php if ($custom_logo): ?>
-			<img src="<?= $logo_url ?>" class="mainLogo" alt="Logo">
+			<div class="row h-100">
+				<div class="col- align-self-center center-content">
+					<img src="<?= $logo_url ?>" class="mainLogo" alt="Logo">
+				</div>
+			</div>
 		<?php else: ?>
-			<h1 class="logoText"><?= bloginfo('name'); ?></h1>
+			<div class="row h-100">
+				<div class="col- align-self-center center-content">
+					<h1 class="logoText"><?= bloginfo('name'); ?></h1>
+				</div>
+			</div>
 		<?php endif; ?>
 
 		<?php if(get_bloginfo('description') != ''): ?>
-			<p class="lead">
-				<?= bloginfo('description'); ?>
-			</p>
+			<div class="row h-100">
+				<div class="col- align-self-center center-content">
+					<p class="lead">
+						<?= bloginfo('description'); ?>
+					</p>
+				</div>
+			</div>
 		<?php endif; ?>
 
 		<!-- Show nav on page -->
-		<?php wp_nav_menu(array(
-			'theme_location' => 'main_nav',
-			'menu_class' => 'main-menu h-100',
-			'menu-id' => 'main-menu',
-			'container_class' => 'header-menu-container'
-		));  ?>
+		<div class="align-items-center">
+			<div class="col-">
+				<?php wp_nav_menu(array(
+					'theme_location' => 'main_nav',
+					'menu_class' => 'main-menu h-100',
+					'menu-id' => 'main-menu',
+					'container_class' => 'header-menu-container'
+				));  ?>
+			</div>
+		</div>
 	</div>
 </div>
 
