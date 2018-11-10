@@ -168,10 +168,6 @@
 	font-family: 'Lato Bold', sans-serif;
 }
 
-.col-custom{
-	position: relative;
-}
-
 .classes-template-container{
 	width: 90vw;
 }
@@ -185,7 +181,8 @@
 }
 
 .classes-template-title{
-	font-size: 2em;
+	font-size: 1.8em;
+	text-align: center;
 }
 
 i.classes-template-chevron{
@@ -215,8 +212,9 @@ i.classes-template-chevron{
 	display: block;
 	margin: 1.2em auto;
 	max-width: 80vw;
+	height: 211px;
+	object-fit: cover;
 	width: 324px;
-	height: auto;
 }
 
 .project-title{
@@ -261,14 +259,57 @@ i.classes-template-chevron{
 }
 
 
-@media screen and (min-device-width: 1024px){
+@media screen and (min-width: 500px){
+
+	.classes-template-title-wrapper{
+		margin: 4em 0 2em 0;
+	}
+
+	.classes-template-title{
+		font-size: 2.5em;
+	}
+
+	i.classes-template-chevron{
+		font-size: 1.5em;
+		padding-top: 0.2em;
+	}
+
+	.classes-template-blurb{
+		font-size: 0.9em;
+		margin: 0 auto 2.5em auto;
+		width: 80%;
+	}
+
+}
+
+@media screen and (min-width: 1024px){
 
 	.col-custom{
 		color: rgba(33, 37, 41, 0);
 	}
 
+	.classes-template-title-wrapper{
+		margin: 4em 0 2em 0;
+	}
+
+	.classes-template-title{
+		font-size: 3em;
+	}
+
+	i.classes-template-chevron{
+		font-size: 1.8em;
+		padding-top: 0.3em;
+	}
+
+	.classes-template-blurb{
+		font-size: 1em;
+		margin: 0 auto 3em auto;
+		width: 60%;
+	}
+
 	.project-title{
 		background: none;
+		cursor: pointer;
 		transition: .5s ease;
 
 	}
@@ -280,9 +321,9 @@ i.classes-template-chevron{
 			top: 50%;
 		  left: 50%;
 	  transform: translate(-50%, -50%);
-		height: 90%;
+		height: 110%;
 		transition: .5s ease;
-		width: 90%;
+		width: 100%;
 		z-index: 1;
 	}
 
@@ -298,4 +339,11 @@ i.classes-template-chevron{
 		flex-grow: 0;
 	} */
 
+}
+
+@media screen and (min-width: 1200px){
+	.hover-event-trigger{
+		position: relative;
+		max-width: 330px;
+	}
 }
