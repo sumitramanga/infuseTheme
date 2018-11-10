@@ -20,6 +20,8 @@ function addCustomMenus(){
 // Fire the function/add action on initilising the theme
 add_action('init', 'addCustomMenus');
 
+add_image_size('icon', 50, 50, true);
+
 //-------------- ADDING POST TYPE STUDENTS -----------------
 
 
@@ -162,7 +164,7 @@ function remove_the_widget() {
 	unregister_widget('WP_Widget_Recent_Comments');
 	unregister_widget('WP_Widget_Tag_Cloud');
 	unregister_widget('WP_Nav_Menu_Widget');
-	// unregister_widget('WP_Widget_Custom_HTML');
+	unregister_widget('WP_Widget_Custom_HTML');
 	unregister_widget('WP_Widget_RSS');
 	unregister_widget('WP_Widget_Pages');
 	unregister_widget('WP_Widget_Gallery');

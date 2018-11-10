@@ -8,13 +8,13 @@
 
 			<div class="row justify-content-around sponsers">
 				<div class="col-">
-					<a href="#"><?php echo get_theme_mod('footer_text_setting'); ?></a>
+					<a href="#"><img src="<?php echo get_theme_mod('footer_text_setting'); ?>" alt="sponser"></a>
 				</div>
 				<div class="col-">
-					<a href="#"><?php echo get_theme_mod('footer_text_setting_two'); ?></a>
+					<a href="#"><img src="<?php echo get_theme_mod('footer_text_setting_two'); ?>" alt="sponser"></a>
 				</div>
 				<div class="col-">
-					<a href="#"><?php echo get_theme_mod('footer_text_setting_three'); ?></a>
+					<a href="#"><img src="<?php echo get_theme_mod('footer_text_setting_three'); ?>" alt="sponser"></a>
 				</div>
 			</div>
 		</div>
