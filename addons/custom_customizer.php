@@ -1,5 +1,34 @@
 <?php
 
+// HEADER LOGO  ----------------------------------------------------------------
+
+function header_logo_custom_theme_customizer($wp_customize) {
+	$wp_customize-> add_section('custom_theme_header_logo', array(
+		'title' => __('Navigation Logo', 'infusetheme'),
+		'description' => 'Insert a navigation logo to appear in the header',
+		'priority' => 20
+	));
+
+	$wp_customize-> add_setting('header_logo_setting', array(
+		'default' => '',
+		'transport' => 'refresh'
+	));
+
+	$wp_customize-> add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'header_logo_control',
+			array(
+				'label' => __('Logo', 'infusetheme'),
+				'section' => 'custom_theme_header_logo',
+				'settings' => 'header_logo_setting'
+			)
+		)
+	);
+}
+
+add_action('customize_register', 'header_logo_custom_theme_customizer');
+
 // FOOTER -----------------------------------------------------------------
 
 function footer_custom_theme_customizer($wp_customize){
