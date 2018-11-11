@@ -16,7 +16,7 @@ Template Name: Classes template
 <?php if(have_posts()): ?>
 
   <?php while(have_posts()): the_post(); ?>
-      <div class="classes-template-title-wrapper"> <a href="/infuse2018"><i class="classes-template-chevron fas fa-chevron-left"></i></a> <h1 class="classes-template-title"><?php the_title();  ?></h1> <span><i class="classes-template-chevron fas fa-chevron-left chevron-hidden"></i></span></div>
+      <div class="classes-template-title-wrapper"> <a href="http://infuse.yoobee.net.nz/"><i class="classes-template-chevron fas fa-chevron-left"></i></a> <h1 class="classes-template-title"><?php the_title();  ?></h1> <span><i class="classes-template-chevron fas fa-chevron-left chevron-hidden"></i></span></div>
       <div class="classes-template-blurb"><?php the_content();  ?></div>
   <?php endwhile; ?>
 <?php endif; ?>
@@ -55,53 +55,54 @@ Template Name: Classes template
 
 
                <?php
-                	$images =& get_children( array (
-                		'post_parent' => $post->ID,
-                		'post_type' => 'attachment',
-                		'post_mime_type' => 'image',
-                    'exclude' => get_post_thumbnail_id()
-                	));
+               $postID = get_the_id();
+               $image =  get_post_meta( $postID, 'header_image', true );
+               if($image){
 
-                	if ( empty($images) ) {
+                   $projectThumbnailImg = wp_get_attachment_image_url($image, 'project-thumbnail', false);
+                   $projectFullImg = wp_get_attachment_image_url($image, 'large', false);
 
-                	} else {
-                    ?>
-                    <div class="col col-custom" data-toggle="modal" data-target="#content<?php echo($post->ID); ?>">
-                      <div class="hover-event-trigger">
-                        <?php foreach ( $images as $attachment_id => $attachment ) {
-                          echo wp_get_attachment_image( $attachment_id, 'large', false, ['class'=>'attachment-project-thumbnail'] );
-                        } ?>
-                       <h5 class="project-title"><?php the_title(); ?></h5>
-                       <div class="white-backdrop"></div>
-                       </div>
-                   </div>
+                   ?>
+
+                   <div class="col col-custom" data-toggle="modal" data-target="#content<?php echo($post->ID); ?>">
+                     <div class="hover-event-trigger">
+                       <img src="<?= $projectThumbnailImg ?>" alt="project image thumbnail" class="attachment-project-thumbnail">
+                      <h5 class="project-title"><?php the_title(); ?></h5>
+                      <div class="white-backdrop"></div>
+                      </div>
+                  </div>
 
 
-                   <!-- Modal -->
-                   <div class="modal fade" id="content<?php echo($post->ID); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                       <div class="modal-content">
-                         <div class="modal-header">
-                           <div class="modal-header-flex">
-                             <?php the_post_thumbnail('thumbnail', ['class'=>'project-profile-img', 'alt'=>'thumbnail image']); ?>
-                             <h5 class="modal-title" id="exampleModalLongTitle"><?php the_title(); ?></h5>
-                           </div>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                         </div>
-                         <div class="modal-body">
-                           <div class="project-modal-content">
-                             <?php the_content('image'); ?>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <!-- End Modal -->
-                    <?php
-                	}
-                ?>
+                  <!-- Modal -->
+                  <div class="modal fade" id="content<?php echo($post->ID); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <div class="modal-header-flex">
+                            <?php the_post_thumbnail('thumbnail', ['class'=>'project-profile-img', 'alt'=>'thumbnail image']); ?>
+                            <h5 class="modal-title" id="exampleModalLongTitle"><?php the_title(); ?></h5>
+                          </div>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="project-modal-content">
+                            <img src="" alt="">
+                            <img src="<?= $projectFullImg ?>" alt="project image">
+                            <?php the_content(); ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+
+                   <?php
+                 }
+                 ?>
+
+
 
 
          <?php endwhile; ?>

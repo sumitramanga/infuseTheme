@@ -1,3 +1,5 @@
+$ = jQuery;
+
 $(document).on('click', '.set_custom_images', function(e) {
     e.preventDefault();
     var button = $(this);

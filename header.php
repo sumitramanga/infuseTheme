@@ -11,8 +11,8 @@
 	<nav class="navbar navbar-light navbarBg">
 		<?php $headerLogoSetting = get_theme_mod('header_logo_setting'); ?>
 		<?php if( strlen($headerLogoSetting) > 0 ): ?>
-			<a class="navbar-brand" href="/infuse2018"><img src="<?php echo get_theme_mod('header_logo_setting'); ?>" alt="Logo"></a>
+			<a class="navbar-brand" href="http://infuse.yoobee.net.nz/"><img src="<?php echo get_theme_mod('header_logo_setting'); ?>" alt="Logo" class="nav-logo"></a>
 		<?php else: ?>
-			<a class="navbar-brand" href="/infuse2018"><?= bloginfo('name'); ?></a>
+			<a class="navbar-brand" href="http://infuse.yoobee.net.nz/"><?= bloginfo('name'); ?></a>
 		<?php endif; ?>
 	</nav>
