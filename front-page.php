@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main wrapper-main">
-	<div class="container text-center main-screen">
+	<div class="container container-custom text-center main-screen">
 		<div>
 			<?php
 				$custom_logo = get_theme_mod('custom_logo');
@@ -48,7 +48,7 @@
 </div>
 
 <div class="footer-content">
-	<div class="container">
+	<div class="container container-custom">
 		<!-- Date/Time viewing -->
 		<?php if(is_active_sidebar('front_date_widget')): ?>
 			<div id="front_date_widget">
