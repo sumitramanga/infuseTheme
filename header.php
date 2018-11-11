@@ -10,5 +10,5 @@
 <body class="bg-color">
 
 	<nav class="navbar navbar-light navbarBg">
-	  <a class="navbar-brand" href="#"><?= bloginfo('name'); ?></a>
+	  <a class="navbar-brand" href="/infuse2018"><?= bloginfo('name'); ?></a>
 	</nav>

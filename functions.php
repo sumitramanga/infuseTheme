@@ -1,6 +1,7 @@
 <?php
 
 function addCustomThemeStyles() {
+	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.4.2/css/all.css', array(), '5.4.2', 'all');
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.1.3', 'all');
 	wp_enqueue_style('customcss', get_template_directory_uri() . '/assets/css/theme-style.css', array(), '0.0.1', 'all');
 	wp_enqueue_script('jquery');
@@ -173,3 +174,6 @@ function remove_the_widget() {
 add_action( 'widgets_init', 'remove_the_widget' );
 
 require get_parent_theme_file_path('./addons/custom_customizer.php');
+
+// RESTRICT IMAGE CROP
+add_image_size('project-thumbnail', 324, 211, true);
