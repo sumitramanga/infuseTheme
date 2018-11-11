@@ -177,3 +177,6 @@ require get_parent_theme_file_path('./addons/custom_customizer.php');
 
 // RESTRICT IMAGE CROP
 add_image_size('project-thumbnail', 324, 211, true);
+
+
+require get_parent_theme_file_path('./addons/custom_fields.php');
