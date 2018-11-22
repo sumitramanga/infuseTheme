@@ -43,6 +43,9 @@
 					));  ?>
 				</div>
 			<!-- </div> -->
+			<div class="col- down-arrow">
+				<i id="down-arrow" class="fas fa-chevron-down"></i>
+			</div>
 		</div>
 	</div>
 </div>

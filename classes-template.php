@@ -16,7 +16,7 @@ Template Name: Classes template
 <?php if(have_posts()): ?>
 
   <?php while(have_posts()): the_post(); ?>
-      <div class="classes-template-title-wrapper"> <a href="http://infuse.yoobee.net.nz/"><i class="classes-template-chevron fas fa-chevron-left"></i></a> <h1 class="classes-template-title"><?php the_title();  ?></h1> <span><i class="classes-template-chevron fas fa-chevron-left chevron-hidden"></i></span></div>
+      <div class="classes-template-title-wrapper"> <a href="<?= site_url(); ?>"><i class="classes-template-chevron fas fa-chevron-left"></i></a> <h1 class="classes-template-title"><?php the_title();  ?></h1> <span><i class="classes-template-chevron fas fa-chevron-left chevron-hidden"></i></span></div>
       <div class="classes-template-blurb"><?php the_content();  ?></div>
   <?php endwhile; ?>
 <?php endif; ?>
@@ -57,6 +57,9 @@ Template Name: Classes template
                <?php
                $postID = get_the_id();
                $image =  get_post_meta( $postID, 'header_image', true );
+               $link =  get_post_meta( $postID, 'profile_link', true );
+               // var_dump($link);
+               // die();
                if($image){
 
                    $projectThumbnailImg = wp_get_attachment_image_url($image, 'project-thumbnail', false);
@@ -64,7 +67,7 @@ Template Name: Classes template
 
                    ?>
 
-                   <div class="col col-custom" data-toggle="modal" data-target="#content<?php echo($post->ID); ?>">
+                   <div class="col-xl-4 col-lg-6 col-custom" data-toggle="modal" data-target="#content<?php echo($post->ID); ?>">
                      <div class="hover-event-trigger">
                        <img src="<?= $projectThumbnailImg ?>" alt="project image thumbnail" class="attachment-project-thumbnail">
                       <h5 class="project-title"><?php the_title(); ?></h5>
@@ -80,7 +83,12 @@ Template Name: Classes template
                         <div class="modal-header">
                           <div class="modal-header-flex">
                             <?php the_post_thumbnail('thumbnail', ['class'=>'project-profile-img', 'alt'=>'thumbnail image']); ?>
-                            <h5 class="modal-title" id="exampleModalLongTitle"><?php the_title(); ?></h5>
+                            <div class="modal-header-text">
+                              <h5 class="modal-title" id="exampleModalLongTitle"><?php the_title(); ?></h5>
+                              <?php if($link): ?>
+                                <a href="<?= $link ?>" target="_blank" class="modal-header-link">View profile</a>
+                              <?php endif; ?>
+                            </div>
                           </div>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -88,8 +96,7 @@ Template Name: Classes template
                         </div>
                         <div class="modal-body">
                           <div class="project-modal-content">
-                            <img src="" alt="">
-                            <img src="<?= $projectFullImg ?>" alt="project image">
+                            <img src="<?= $projectFullImg ?>" alt="project image" class="project-modal-img">
                             <?php the_content(); ?>
                           </div>
                         </div>

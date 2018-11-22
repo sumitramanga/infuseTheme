@@ -43,9 +43,9 @@ ul{
 }
 
 .main {
-	background: #2c2b71;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top left, #2c2b71, #4FC2B6, #ED217C);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top left, #2c2b71, #4FC2B6, #ED217C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #FFF;
+	/* background: -webkit-linear-gradient(to top left, #2c2b71, #4FC2B6, #ED217C);   Chrome 10-25, Safari 5.1-6 */
+	/* background: linear-gradient(to top left, #2c2b71, #4FC2B6, #ED217C);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	height: 93vh;
 
 }
@@ -72,7 +72,7 @@ ul{
 }
 
 .lead {
-	color: #FFFFFF;
+	color: #2c2b71;
 	font-family: 'Lato Light', sans-serif;
 	font-size: 0.87em;
 	margin: 2em auto;
@@ -108,9 +108,7 @@ ul{
 }
 
 .main-menu li a {
-	border: 0.25em solid #FFFFFF;
 	border-radius: 2em;
-	color: #FFFFFF;
 	font-family: 'Lato Bold', sans-serif;
 	font-size: 0.9em;
 	padding: 1em 2em;
@@ -120,11 +118,59 @@ ul{
 	width: 92%;
 }
 
+/* Note that these colours are hard coded and may need to be changed depending on the order the classes are rendered */
+
+.main-menu li:first-of-type a{
+	color: #4FC2B6;
+	border: 0.25em solid #4FC2B6;
+}
+
+.main-menu li:first-of-type a:hover{
+	background-color: #4FC2B6;
+}
+
+.main-menu li:nth-of-type(2) a{
+	color: #2c2b71;
+	border: 0.25em solid #2c2b71;
+}
+
+.main-menu li:nth-of-type(2) a:hover{
+	background-color: #2c2b71;
+}
+
+.main-menu li:nth-of-type(3) a{
+	color: #ED217C;
+	border: 0.25em solid #ED217C;
+}
+
+.main-menu li:nth-of-type(3) a:hover{
+	background-color: #ED217C;
+}
+
 .main-menu li a:hover {
-	color: #1C1C1C;
+	color: #FFF;
 	background-color:  #FFFFFF;
 	text-decoration: none;
 	transition: 0.4s;
+}
+
+.down-arrow{
+	color: #1C1C1C !important;
+	position: absolute;
+		left: 49%;
+	z-index: 1000;
+}
+
+.down-arrow p{
+	font-size: 0.9em;
+}
+
+.down-arrow i{
+	font-size: 1.3em;
+}
+
+#down-arrow{
+	display: none;
 }
 
 .footer-content {
@@ -255,14 +301,23 @@ i.classes-template-chevron{
 }
 
 .modal-title{
-	font-size: 1.2em;
+	font-size: 1.3em;
+}
+
+a.modal-header-link {
+	font-size: 0.9em;
+	margin: 0.9em 0 0 0.1em;
+}
+
+ a.modal-header-link:link, a.modal-header-link:visited, a.modal-header-link:hover, a.modal-header-link:active{
+	text-decoration: none;
 }
 
 .project-profile-img{
 	align-self: flex-start;
 	border-radius: 50%;
-	margin-right: 1em;
-	width: 25%;
+	margin-right: 1.5em;
+	width: 30%;
 	height: auto;
 }
 
@@ -297,6 +352,14 @@ i.classes-template-chevron{
 		width: 70%;
 	}
 
+	.down-arrow{
+		bottom: 4em;
+	}
+
+	.down-arrow i{
+		font-size: 2em;
+	}
+
 	.classes-template-title-wrapper{
 		margin: 4em 0 2em 0;
 	}
@@ -314,6 +377,10 @@ i.classes-template-chevron{
 		font-size: 0.9em;
 		margin: 0 auto 2.5em auto;
 		width: 80%;
+	}
+
+	.modal-lg{
+		max-width: 670px;
 	}
 
 }
@@ -334,6 +401,10 @@ i.classes-template-chevron{
 
 	.main-menu li a {
 		width: 56%;
+	}
+
+	.modal-title{
+		font-size: 1.8em;
 	}
 
 	.exhib-address p, .exhib-time {
@@ -403,10 +474,6 @@ i.classes-template-chevron{
 		background-color: rgba(255, 255, 255, 0.7);
 	}
 
-	/* .col-custom:nth-last-child(1){
-		flex-grow: 0;
-	} */
-
 }
 
 @media screen and (min-width: 1200px){
@@ -445,4 +512,38 @@ i.classes-template-chevron{
 	.exhib-address p, .exhib-time {
 		font-size: 1.2em;
 	}
+
+	.project-modal-content img{
+		/* display: inline;
+		float: left;
+		margin-right: 2em; */
+		/* margin: auto;
+		text-align: center;
+		width: 80%; */
+	}
+
+	.project-modal-content p:first-of-type{
+		/* padding-top: 1em; */
+		margin: 2em 1em 1em 0;
+	}
+
+}
+
+.footer-credits{
+	color: rgba(255,255,255,0.6);
+	display: flex;
+		justify-content: flex-end;
+	font-size: 0.7em;
+	font-style: italic;
+	padding: 1.5em 2.5em;
+}
+
+.footer-credits a:link, .footer-credits a:visited{
+	color: inherit;
+	text-decoration: none;
+	font-weight: 800;
+}
+
+.footer-credits a:hover, .footer-a:active{
+	color: #4FC2B6;
 }

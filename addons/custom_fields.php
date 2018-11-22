@@ -17,6 +17,10 @@ $metaboxes = array(
                 'title' => __('Project Image: ', 'infusetheme'),
                 'type' => 'image',
                 'description' => 'Image which is being displayed in the header.'
+            ),
+            'profile_link' => array(
+              'title' => __('Link to Linkedin: ', 'infusetheme'),
+              'type' => 'text'
             )
         )
     ),
@@ -72,6 +76,8 @@ function show_metaboxes( $post, $args ) {
             switch ( $field['type'] ) {
                 case 'text':
                     $output .= '<div class="form-group"><label for="' . $id . '">' . $field['title'] . '</label><input class="customInput" id="' . $id . '" type="text" name="' . $id . '" value="' . $custom[$id][0] . '" style="width: 100%;" /></div>';
+                    $output .= '<p>This can only be a link to your Linkedin profile, remember that the purpose of this website is to promote the exhibition and encourage people to come and find out more about you and your work.<p>';
+                    $output .= '<button>Add Linkedin</button>';
                 break;
                 case 'image':
                     $image =  get_post_meta( $post->ID, $id, true );

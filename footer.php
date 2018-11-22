@@ -30,6 +30,9 @@
 				</div>
 			<?php endif; ?>
 		</div>
+		<div class="footer-credits">
+			<span>Site designed and developed by <a href="https://www.linkedin.com/in/sumitra-manga/" target="blank">Sumitra Manga</a> & <a href="https://nz.linkedin.com/in/izsi-salmon" target="blank">Izsi Salmon</a> </span>
+		</div>
 	</div>
 
 	<?php wp_footer(); ?>
